@@ -16,6 +16,7 @@ Author URL: http://w3layouts.com
     <!-- //web fonts -->
     <!-- Template CSS -->
     <link rel="stylesheet" href="css/style-starter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
 
@@ -70,13 +71,24 @@ Author URL: http://w3layouts.com
                <!-- contact form -->
                <div class="contacts12-main col-lg-6 ">
                    
-                <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="main-input">
-                    <div class="top-inputs d-grid">
-                        <input type="text" placeholder="Name" name="w3lName" id="w3lName" required="">
-                       
+                <form action="" id="submit-form" class="main-input">
+                    <div class="top-inputs d-grid col-md-6 float-left">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="" name="Name" id="name" required="">   
                     </div>
-                    <input type="email" name="email" placeholder="Email" id="w3lSender" required="">
-                   
+                    <div class="top-inputs d-grid col-md-6 float-left">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="" name="Name" id="name" required="">   
+                    </div>
+                    <div  class="top-inputs d-grid col-md-6 float-left">
+                       <label for="email">Email</label> 
+                       <input type="email" name="Email" placeholder="" id="email" required="">
+                    </div>
+                     <div  class="top-inputs d-grid col-md-6 float-left">
+                       <label for="mobile">Mobile no.</label> 
+                       <input type="tel" name="Mobile" placeholder="" maxlength="10" minlength="10" id="mobile" required="">
+                    </div>
+                      
                     <textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea>
                     <div class="text-right">
                         <button type="submit" class="btn btn-theme2">Submit Now</button>
@@ -204,6 +216,27 @@ Author URL: http://w3layouts.com
   </script>
 
 <!-- Smooth scrolling -->
+  
+    
+ <script>
+  $("#submit-form").submit((e)=>{
+      e.preventDefault()
+      $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbylfGeMlsTgNblX2VXDYNVK6UTnQKu_CkqQU_Nbbw/exec",
+          data:$("#submit-form").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Form submitted successfully")
+              window.location.reload()
+              //window.location.href="https://google.com"
+          },
+          error:function (err){
+              alert("Something Error")
+
+          }
+      })
+  })
+</script>
 
 
 
