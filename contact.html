@@ -191,13 +191,14 @@ Author URL: http://w3layouts.com
   <script src="js/jquery-3.3.1.min.js"></script>
   
   <script src="js/bootstrap.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Smooth scrolling -->
 <script>
   $("#submit-form").submit((e)=>{
       e.preventDefault()
       $.ajax({
-          url:"https://script.google.com/macros/s/AKfycbx57s3WqnkLOzxK4pxwwmiZx41Ipm6NaMQBCXSBqw/exec",
+          url:"https://script.google.com/macros/s/AKfycbyH5ZQX4DICnOu4b-T7W6fgseUouMBZE3KpIDo6MBEdxJ2H6Zw1/exec",
           data:$("#submit-form").serialize(),
           method:"post",
           success:function(response){
