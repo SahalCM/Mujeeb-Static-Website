@@ -15,7 +15,7 @@ Author URL: http://w3layouts.com
     <link href="//fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
     <!-- //web fonts -->
     <!-- Template CSS -->
-    <link rel="stylesheet" href="css/style-starter.css">
+    <link rel="stylesheet" href="css/style-starter.css" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
@@ -69,35 +69,29 @@ Author URL: http://w3layouts.com
             
             <div class="row cont-main-top">
                <!-- contact form -->
-               <div class="contacts12-main col-md-8 ">
+               <div class="contacts12-main col-lg-6 ">
                    
-                <form action="" id="submit-form" class="main-input">
-             
-                        <label for="name">Name</label>
-                        <input type="text" placeholder="" name="Name" id="name" required="">   
+                <form id="submit-form" action="" class="main-input">
+                    <div class="p-2 d-grid">
+                        <input type="text" placeholder="Name" name="Name" id="name" required>
+                    </div>
+                    <div class="p-2 d-grid">   
+                        <input type="text" placeholder="Place" name="Place" id="place" required >
+                    </div>
+                    <div class="p-2 d-grid">
+                        <input type="email" name="Email" placeholder="Email" id="email" required>
+                    </div>
                   
-                         
-                        <label for="place">Place</label>
-                        <input type="text" placeholder="" name="Place" id="place" required="">   
-                   
-                   
-                       <label for="email">Email</label> 
-                       <input type="email" name="Email" placeholder="" id="email" required="">
-                    
-                     
-                       <label for="mobile">Mobile no.</label> 
-                       <input type="tel" name="Mobile" placeholder="" maxlength="10" minlength="10" id="mobile" required="">
-                    
-                      
-                    <textarea placeholder="Message" name="Message" id="Message" required=""></textarea>
-                    <div class="text-right">
-                        <button type="submit" class="btn btn-theme2">Submit Now</button>
+                      <textarea class="p-2 d-grid" placeholder="Message" name="Message" id="message" required></textarea>
+
+                    <div class="text-right btn">
+                        <input type="submit" value="Submit" class="btn btn-theme2 ">
                     </div>
                 </form>
             </div>
             <!-- //contact form -->
                 <!-- contact address -->
-                <div class="contact col-md-4 mt-lg-0 mt-5">
+                <div class="contact col-lg-6 mt-lg-0 mt-5">
                     <div class="cont-subs">
                         <div class="cont-add">
                             <div class="cont-add-lft">
@@ -110,25 +104,16 @@ Author URL: http://w3layouts.com
                     </div>
                         <div class="cont-add add-2">
                             <div class="cont-add-lft">
-                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                              <span class="fa fa-phone" aria-hidden="true"></span>
                            </div> 
                            <div class="cont-add-rgt">
-                          <a href="mailto:info@example.com">
-                                <p class="contact-text-sub">mujeebca@gmail.com</p>
-                            </a>
+                            <a href="tel:+919846249202">
+                              <p class="contact-text-sub">+91 9846249202</p>
+                           </a>
                         </div>
                        
                     </div>
-                        <div class="cont-add">
-                            <div class="cont-add-lft">
-                                <span class="fa fa-phone" aria-hidden="true"></span>
-                           </div>
-                            <div class="cont-add-rgt">
-                                 <a href="tel:+919846249202">
-                                    <p class="contact-text-sub">+91 9846249202</p>
-                                 </a>
-                            </div>
-                        </div>
+                        
                         
                     
                 </div>
@@ -137,11 +122,7 @@ Author URL: http://w3layouts.com
             </div>
         </div>
         <!-- map -->
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12481.347335894296!2d76.37798021176171!3d10.053512280354933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0809415ff0be5d%3A0x26c9b87c8876c425!2sEdathala%2C%20Aluva%2C%20Kerala!5e1!3m2!1sen!2sin!4v1632229605001!5m2!1sen!2sin"
-                frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </div>
+       
 
         
         <!-- //map -->
@@ -207,27 +188,19 @@ Author URL: http://w3layouts.com
     });
   </script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
+  <script src="js/jquery-3.3.1.min.js"></script>
   
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
 <!-- Smooth scrolling -->
-  
-    
- <script>
+<script>
   $("#submit-form").submit((e)=>{
       e.preventDefault()
       $.ajax({
-          url:"https://script.google.com/macros/s/AKfycbylfGeMlsTgNblX2VXDYNVK6UTnQKu_CkqQU_Nbbw/exec",
+          url:"https://script.google.com/macros/s/AKfycbx57s3WqnkLOzxK4pxwwmiZx41Ipm6NaMQBCXSBqw/exec",
           data:$("#submit-form").serialize(),
           method:"post",
-          success:function (response){
+          success:function(response){
               alert("Form submitted successfully")
               window.location.reload()
               //window.location.href="https://google.com"
@@ -239,7 +212,6 @@ Author URL: http://w3layouts.com
       })
   })
 </script>
-
 
 
 </body>
